@@ -31,7 +31,7 @@ section.alternate-background {
 }
 
 main img {
-  width: 300px;
+  width: 100%;
 }
 
 /* ---  Groups & Items --- */
@@ -50,11 +50,10 @@ main img {
   flex: 2;
 }
 
-
 /* -------  Navigation ------- */
 
 header {
-  background-color: #FF385C;
+  background-color: #ff385c;
   padding: 20px 20px 0 20px;
   text-align: center;
 }
@@ -87,15 +86,13 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-  color: #BDBDBD;
+  color: #bdbdbd;
   text-decoration: none;
 }
 
-
-
 /* -------  Search Form ------- */
 form {
-  border: 2px solid #FF385C;
+  border: 2px solid #ff385c;
   padding: 10px;
 }
 
@@ -116,14 +113,13 @@ form input {
 }
 
 form button {
-  background-color: #FF385C;
+  background-color: #ff385c;
   border: none;
   color: #fff;
   font-size: 24px;
   padding: 15px;
   width: 100%;
 }
-
 
 /* -------  Footer ------- */
 
@@ -139,47 +135,64 @@ footer p {
 
 /* -------  Media Query ------- */
 
-p {
-  font-size: 14px;
-}
-
 @media all and (min-width: 800px) {
+
+  form {
+    display: flex;
+  }
+
+  form div {
+    margin: 0 auto;
+    flex-direction: column;
+  }
+
+  form button {
+    font-size: 24px;
+    padding: 15px;
+    height: 10%;
+    width: 13%;
+  }
+
   header {
     display: flex;
     justify-content: space-between;
+    padding: 0 30px;
+  }
+  header h1 {
+    margin: 14px 0;
+    padding-top: 0;
+  }
+
+  header nav ul {
+    align-items: center;
+  }
+
+  header nav ul li a:hover {
+    color: #bdbdbd;
+  }
+
+  main img {
+    width: 100%;
+  }
+  
+  .group {
+    flex-direction: row;
+    align-items: center;
+  }
+  .logo {
+    margin: 14px 0 14px 20px;
+    padding-top: 0;
+    font-size: 42px;
   }
 }
 
-.logo {
-  margin: 14px 0 20px;
-  padding-top: 0;
-  font-size: 38px;
+/*------- Classes -------*/
+
+.h2 {
+  padding-top: 10px;
 }
 
-header nav ul {
-  align-items: center;
-}
-
-.group {
-  flex-direction: column;
-  align-items: center;
-}
-
-form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-form div {
+.column {
+  width: fit-content;
   flex-direction: column;
 }
-
-form button {
-  flex: 1;
-}
-
-form select, form input {
-  margin-bottom: 0px;
-  }
-
